@@ -249,20 +249,21 @@ const saveChanges = () => {
 .form-select {
   width: 100%;
   padding: 8px 32px 8px 12px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #e2e8f0;
   border-radius: 6px;
   background: white;
   font-size: 14px;
-  color: #374151;
+  color: #64748b;
   appearance: none;
   cursor: pointer;
   transition: all 0.2s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .form-select:focus {
   outline: none;
   border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .select-arrow {
@@ -271,7 +272,25 @@ const saveChanges = () => {
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  color: #6b7280;
+  color: #94a3b8;
+}
+
+/* Custom dropdown styling */
+.select-wrapper select option {
+  padding: 12px 16px;
+  background: white;
+  color: #374151;
+  border: none;
+}
+
+.select-wrapper select option:hover {
+  background: #f1f5f9;
+}
+
+.select-wrapper select option:checked {
+  background: #dbeafe;
+  color: #3b82f6;
+  font-weight: 500;
 }
 
 .search-container {
